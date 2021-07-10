@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/border_radius"
+    android:backgroundTint="@color/white"
+    android:padding="10dp"
+    android:elevation="1dp"
+    android:layout_marginTop="4dp">
+
+<!-- User Start -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:id="@+id/user">
+        <!-- Avatar Start-->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="25dp"
+            android:layout_marginRight="10dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_user_profile"
+                android:id="@+id/post_user_profile_pic_url"
+                android:scaleType="centerCrop"/>
+        </com.google.android.material.card.MaterialCardView>
+        <!-- Avatar End-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Murtaza Ahmad"
+                android:id="@+id/post_user_name"
+                android:textColor="@color/greyDark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22 Jan, 2021"
+                android:id="@+id/post_date"
+                android:textSize="12dp"
+                android:textColor="@color/greyLight" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- User End -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last year we worked with Pappyon, a new startup aimin  to streamine the way busninesses and professionals connect"
+        android:id="@+id/post_content"
+        android:textColor="@color/greyDark"
+        android:layout_marginBottom="5dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:src="@null"
+        android:visibility="gone"
+        android:id="@+id/post_image"
+        android:scaleType="centerCrop"/>
+
+    <!--   Post Like and Comments -  Start -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/post_likes">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_heart"
+                android:id="@+id/post_likes_icon"
+                android:layout_marginRight="5dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/post_likes_count"
+                android:textColor="@color/greyLight"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Likes"
+                android:textColor="@color/greyLight"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:id="@+id/post_comments">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_comment"
+                android:layout_marginRight="3dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Comments"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <!--   Post Like and Comments -  End -->
+
+</LinearLayout>
